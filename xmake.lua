@@ -80,6 +80,9 @@ target("WickedEngine")
 
     add_includedirs("WickedEngine", {public = true})
 
+    -- Install all headers preserving directory structure relative to WickedEngine/
+    add_headerfiles("WickedEngine/(**.h)", "WickedEngine/(**.hpp)", "WickedEngine/(**.inl)")
+
     set_pcxxheader("WickedEngine/WickedEngine.h")
 
     -- Public defines
